@@ -1,41 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sample Web Page</title>
-  <link rel="stylesheet" href="web.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Behavioral Interpreter</title>
+<link rel="stylesheet" href="web.css">
 </head>
 <body>
-  <header>
-    <h1>Welcome to My Website</h1>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <section>
-      <h2>About Us</h2>
-      <p>This is a sample webpage created using HTML and CSS. It demonstrates basic layout and styling techniques.</p>
-    </section>
-    <section>
-      <h2>Our Services</h2>
-      <ul>
-        <li>Web Design</li>
-        <li>Development</li>
-        <li>Consulting</li>
-      </ul>
-    </section>
-  </main>
+<div class="container">
+  <h1>Behavioral Interpreter</h1>
+  <p>Enter relationship statements (one per line). Examples:</p>
+  <ul>
+    <li>Demand depends on Price and Income</li>
+    <li>HouseholdSize = Adults + Children</li>
+    <li>Income = Salary + Bonus</li>
+    <li>Expenditure depends on HouseholdSize and Income</li>
+    <li>TestScore is influenced by StudyHours, Sleep</li>
+  </ul>
 
-  <footer>
-    <p>&copy; 2025 My Website. All rights reserved.</p>
-  </footer>
+  <div id="statements-container"></div>
+
+  <div class="button-row">
+    <button class="btn-add" onclick="addStatement()">+ Add statement</button>
+    <button class="btn-clear" onclick="clearAll()">Clear all</button>
+    <button class="btn-interpret" onclick="interpret()">Interpret</button>
+  </div>
+
+  <div id="interaction-container" class="interactions" style="display:none;"></div>
+  <div id="output-container"></div>
+</div>
+
+<script src="state.js"></script>
 </body>
 </html>
